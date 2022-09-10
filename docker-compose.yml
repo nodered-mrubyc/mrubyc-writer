@@ -8,6 +8,11 @@ services:
     volumes:
       - node-red-data:/data
 
+  sinatra:
+    build: ./sinatra
+    ports:
+      - 4567:4567
+
 volumes:
   node-red-data:
 
