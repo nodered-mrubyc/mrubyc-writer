@@ -1,3 +1,0 @@
-FROM nodered/node-red
-
-

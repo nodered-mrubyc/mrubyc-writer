@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   node-red:
-    image: nodered/node-red:latest
+    build: ./node-red
     ports:
       - "1880:1880"
     volumes:
@@ -11,8 +11,8 @@ services:
   sinatra:
     build: ./sinatra
     ports:
-      - 4567:4567
-
+#      - 4567:4567
+      - 80:4567
 volumes:
   node-red-data:
 

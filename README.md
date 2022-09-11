@@ -28,3 +28,6 @@ Node-REDの環境へ入るには、以下を実行する。`<service>`の部分�
 ```sh
 docker-compose exec <service> bash
 ```
+
+バックグランドで動かす場合は `-d` をつける。
+
