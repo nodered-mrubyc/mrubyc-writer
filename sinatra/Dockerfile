@@ -4,7 +4,8 @@ RUN gem install sinatra
 
 WORKDIR /root/data
 
-RUN cd /root && git clone https://github.com/mruby/mruby.git && cd mruby && make
+# install mruby
+# RUN cd /root && git clone https://github.com/mruby/mruby.git && cd mruby && make
 
 COPY data .
 

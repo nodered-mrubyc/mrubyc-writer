@@ -2,6 +2,9 @@
 require 'sinatra'
 require 'json'
 require "tempfile"
+require 'webrick'
+require 'webrick/https'
+require 'openssl'
 
 set :bind, '0.0.0.0'
 
