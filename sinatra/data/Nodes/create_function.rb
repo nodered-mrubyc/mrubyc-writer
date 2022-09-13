@@ -1,14 +1,14 @@
 def Function_initialize()
     #ノード群のデータ書き込み&ノード管理の実装&バッファーの実装
 
-    File.open("./data/Nodes/function.rb", mode = "w"){|f|
+    File.open("./Nodes/function.rb", mode = "w"){|f|
     f.write("#this is function Node\n")  # ファイルに書き込む
     }
 end
 
 def Write_function(node_id,func)
     node_id = node_id.to_s()
-    File.open("./data/Nodes/function.rb", mode = "a"){|f|
+    File.open("./Nodes/function.rb", mode = "a"){|f|
     f.write("def FunctionNode_"+ node_id + "(msg)\n")
     f.write(func)  # ファイルに書き込む
     f.write("\n")
@@ -19,7 +19,7 @@ end
 
 #存在しているfunctionノードの管理・実行を行うためのmain関数
 def Write_Mainfunction(node_ids)
-    File.open("./data/Nodes/function.rb", mode = "a"){|f|
+    File.open("./Nodes/function.rb", mode = "a"){|f|
     #### -- main --#####
     f.write("
 def Node_function(node_id)

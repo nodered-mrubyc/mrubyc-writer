@@ -21,7 +21,7 @@ def Create_switchnode(node, created_parts, mainFlg = false)
 end
 
 def Switch_initialize()
-    File.open("./data/Nodes/switch.rb", mode = "w"){|f|
+    File.open("./Nodes/switch.rb", mode = "w"){|f|
     f.write("#this is switch Node\n")  # ファイルに書き込む
     }
     return :Switch_initialize
@@ -30,7 +30,7 @@ end
 def Write_switchrule(node)
     parts = []
     node[1][:rules].each do |rule|
-        File.open("./data/Nodes/switch.rb", mode = "a"){|f|
+        File.open("./Nodes/switch.rb", mode = "a"){|f|
 
             if rule[:t] == "eq" && $created_node_parts.include?(:switch_eq) == false
                 parts << :switch_eq
@@ -68,7 +68,7 @@ def Write_switchrule(node)
 end
 
 def Write_switchmain()
-    File.open("./data/Nodes/switch.rb", mode = "a"){|f|
+    File.open("./Nodes/switch.rb", mode = "a"){|f|
         f.write(Switch_main_code())
     }
 end

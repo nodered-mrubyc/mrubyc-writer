@@ -22,7 +22,7 @@ def Create_LEDnode(node, created_parts, mainFlg = false)
 end
 
 def LED_initialize()
-    File.open("./data/Nodes/LED.rb", mode = "w"){|f|
+    File.open("./Nodes/LED.rb", mode = "w"){|f|
     f.write("#this is LED Node\n")  # ファイルに書き込む
     }
 
@@ -53,7 +53,7 @@ def Write_LEDaction(node)
 end
 
 def Write_LEDmain()
-    File.open("./data/Nodes/LED.rb", mode = "a"){|f|
+    File.open("./Nodes/LED.rb", mode = "a"){|f|
         f.write(LED_main_code())
     }
 end

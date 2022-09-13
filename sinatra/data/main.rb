@@ -25,7 +25,7 @@ post "/download_rb" do
   f_mruby = Tempfile.open(["t_", ".rb"])
   f_mruby.close
   # コマンド実行
-  cmd = "ruby ./data/my_json2mruby.rb -r #{f_json.path} -w #{f_mruby.path}"
+  cmd = "ruby ./my_json2mruby.rb -r #{f_json.path} -w #{f_mruby.path}"
   `#{cmd}`
   # 実行結果を取得
   @generated_code = File.open(f_mruby).read

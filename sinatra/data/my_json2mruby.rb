@@ -188,7 +188,7 @@ end
 
 
 #functionノードの機能を「function.rb」としてプログラムを作成する。
-require "./data/Nodes/create_function.rb"
+require "./Nodes/create_function.rb"
 functionNode_ids = []
 nodes_Hash.each do |element|
   if element[1][:type] == "function"
@@ -218,8 +218,8 @@ end
 #end
 
 #ノード機能を「node.rb」としてプログラムを作成する。
-require "./data/Nodes/create_LED.rb"
-require "./data/Nodes/create_switch.rb"
+require "./Nodes/create_LED.rb"
+require "./Nodes/create_switch.rb"
 
 #ノード機能を部品的に各ノード.rbに記述していく。
 #ノードによっては機能が全く同じものもあるため、生成したパーツ情報を管理する。
@@ -267,7 +267,7 @@ File.open(mrubyc_program, mode = "w"){|f|
   f.write("Nodes_Hash="+hash_txt+"\n")  # ファイルに書き込む
   f.write("DatasBuffer = []\n")  # ファイルに書き込む
 
-  writing_f = File.open("./data/Nodes/Dataprocessing.rb")
+  writing_f = File.open("./Nodes/Dataprocessing.rb")
   tFile = writing_f.read
   writing_f.close
   f.write("\n")
@@ -282,7 +282,7 @@ nodes_Hash.each do |element|
     next
   end
 
-  fileurl = "./data/Nodes/" + element[1][:type] +".rb"
+  fileurl = "./Nodes/" + element[1][:type] +".rb"
 
   f = File.open(fileurl)
   tFile = f.read

@@ -2,13 +2,13 @@ FROM ruby:2.7
 
 RUN gem install sinatra
 
-WORKDIR /root
+WORKDIR /root/data
 
-RUN git clone https://github.com/mruby/mruby.git && cd mruby && make
+RUN cd / && git clone https://github.com/mruby/mruby.git && cd mruby && make
 
-COPY data ./data
+COPY data .
 
 EXPOSE 4567
 
-CMD ["ruby", "data/main.rb"]
+CMD ["ruby", "main.rb"]
 
