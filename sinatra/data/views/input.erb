@@ -1,0 +1,23 @@
+<html lang="ja">	
+  <meta charset="UTF-8">
+  <head>
+    <title>データフロープログラミング for mruby/c</title>
+  </head>
+  <body>
+    <h1>mruby/cプログラム生成</h1>
+    Node-REDの情報から、mruby/c用のソースコードを生成します。
+    <form method="POST">
+      <div>
+	JSONデータ：
+	<textarea name="json_data"
+		  rows="20" cols="60"
+		  placeholder="Node-REDで「書き出し」をして、ペーストしてください"></textarea>
+      </div>
+      <div>
+	<input type="submit" value="rbファイルを生成する" formaction="/download_rb">
+      </div>
+    </form>
+    <hr>
+    <a href="/">Topへ戻る</a>
+  </body>
+</html>

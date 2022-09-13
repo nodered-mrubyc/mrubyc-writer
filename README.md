@@ -8,6 +8,7 @@ docker-compose up
 
 - Node-REDは、ポート番号1880
 - sinatraは、ポート番号4567
+- sinatraの 4567 は、80 にマッピングされる
 
 ## Node-REDの起動方法
 
@@ -31,3 +32,6 @@ docker-compose exec <service> bash
 
 バックグランドで動かす場合は `-d` をつける。
 
+## アクセス方法
+
+ブラウザで `http://localhost/` にアクセスする。
