@@ -9,7 +9,10 @@
       "GPIO-Write-1":"GPIO-Write-1.js",
       "I2C":"I2C.js",
       "function":"function.js",
-      "Format_NodeType":"Format_NodeType.js"
+      "Format_NodeType": "Format_NodeType.js",
+      "ADC": "ADC.js",
+      "Trigger": "Trigger.js",
+      "PWM": "PWM.js"
     }
   },
   "version": "1.0.2",

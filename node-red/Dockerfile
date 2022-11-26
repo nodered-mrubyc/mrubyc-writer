@@ -88,6 +88,8 @@ RUN rm ./node_modules/@node-red/nodes/core/parsers/70-YAML.js
 
 
 #sequence
+#RUN rm -R ./node_modules/@node-red/nodes/core/sequence
+
 RUN rm ./node_modules/@node-red/nodes/core/sequence/17-split.html
 RUN rm ./node_modules/@node-red/nodes/core/sequence/17-split.js
 
