@@ -93,19 +93,21 @@ RED.nodes.registerType("LED",LED_Node);
 ```
 
 ・jsonファイル
+
 ローカルのフォルダで作成した場合、URLは不要。
-行先頭に＊は設定が必須。その他は項目は必要だが設定は不要。
+
+""表示のものは設定不要。
 ```sh
-＊{
-＊ "name": "node-red-contrib-mrubyc-rboard",
-＊  "node-red" : {
-＊   "nodes": {
-＊      "LED":"LED.js"
-＊ 　　}
-＊},
+{
+ "name": "node-red-contrib-mrubyc-rboard",
+  "node-red" : {
+   "nodes": {
+      "LED":"LED.js"
+ 　　}
+},
  "version":"1.0.0",
  "description":""
-＊ "main":"LED.js"
+ "main":"LED.js"
  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
