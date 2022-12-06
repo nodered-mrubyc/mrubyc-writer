@@ -37,8 +37,11 @@ docker-compose exec <service> bash
 ブラウザで `http://localhost/` にアクセスする。
 
 ## ノード作成方法
+
 (1)githubでリポジトリを作成する。（名前はnode-red-contrib-xxx）
+
 (2)jsファイル、htmlファイル、jsonファイルを作成する。
+
 以下にLEDノードの場合の例を示す。
 
 ・jsファイル
@@ -90,7 +93,9 @@ RED.nodes.registerType("LED",LED_Node);
 ```
 
 ・jsonファイル
+
 ローカルのフォルダで作成した場合、URLは不要。
+
 ""表示のものは設定不要。
 ```sh
 {
@@ -122,3 +127,5 @@ RED.nodes.registerType("LED",LED_Node);
 }
 ```
 ##ノード追加方法
+
+dockerでインストール追加する方法を示す。
