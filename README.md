@@ -61,7 +61,7 @@ RED.nodes.registerType("LED",LED_Node);
         category: 'mruby_Rboad_Nodes', //ノードのグループ名（common,fnction,network,parsers,sequence,storage,オリジナル）
         color: "#ffe3a6",
         defaults: {
-           * //必要変数の設定
+           //必要変数の設定
         },
         inputs: 1,　　//ノードの入力
         outputs: 0,　　//ノードの出力
@@ -71,19 +71,23 @@ RED.nodes.registerType("LED",LED_Node);
         },
         
         oneditprepare: function () {
-        *　//複数の機能を付ける場合（今回はRboad上のLEDとGPIOに接続させたLEDの場合）
-        *$("#node-input-LEDtype").on("change", function () {
-        *       if (this.value === "GPIO") {
-        *            $("#LED-conected-Pin").show();
-        *            $("#LED-onBoard").hide();
-        *
-        *        } else if (this.value === "onBoardLED") {
-        *            $("#LED-conected-Pin").hide();
-        *            $("#LED-onBoard").show();
-        *        }
-        *    }).trigger("change");
+        　//複数の機能を付ける場合（今回はRboad上のLEDとGPIOに接続させたLEDの場合）
+        $("#node-input-LEDtype").on("change", function () {
+               if (this.value === "GPIO") {
+                    $("#LED-conected-Pin").show();
+                    $("#LED-onBoard").hide();
+        
+                } else if (this.value === "onBoardLED") {
+                    $("#LED-conected-Pin").hide();
+                    $("#LED-onBoard").show();
+                }
+            }).trigger("change");
         }
    });
 </script>
        
+//htmlの表示コード
+```
 
+・jsonファイル
+```sh
