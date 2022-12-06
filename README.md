@@ -69,4 +69,21 @@ RED.nodes.registerType("LED",LED_Node);
         label: function () {
             return this.name || "LED";　　
         },
+        
+        oneditprepare: function () {
+        *　//複数の機能を付ける場合（今回はRboad上のLEDとGPIOに接続させたLEDの場合）
+        *$("#node-input-LEDtype").on("change", function () {
+        *       if (this.value === "GPIO") {
+        *            $("#LED-conected-Pin").show();
+        *            $("#LED-onBoard").hide();
+        *
+        *        } else if (this.value === "onBoardLED") {
+        *            $("#LED-conected-Pin").hide();
+        *            $("#LED-onBoard").show();
+        *        }
+        *    }).trigger("change");
+        }
+   });
+</script>
+       
 
