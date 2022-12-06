@@ -36,12 +36,9 @@ docker-compose exec <service> bash
 
 ブラウザで `http://localhost/` にアクセスする。
 
-## ノード作成・追加方法
-
-githubで公開する場合、リポジトリを作成する必要がある。（node-red-contrib-xxx）
-
-(1)jsファイル、htmlファイル、jsonファイルを作成する。
-
+## ノード作成方法
+(1)githubでリポジトリを作成する。（名前はnode-red-contrib-xxx）
+(2)jsファイル、htmlファイル、jsonファイルを作成する。
 以下にLEDノードの場合の例を示す。
 
 ・jsファイル
@@ -93,13 +90,11 @@ RED.nodes.registerType("LED",LED_Node);
 ```
 
 ・jsonファイル
-
 ローカルのフォルダで作成した場合、URLは不要。
-
 ""表示のものは設定不要。
 ```sh
 {
- "name": "node-red-contrib-mrubyc-rboard",
+ "name": "node-red-contrib-xxx",
   "node-red" : {
    "nodes": {
       "LED":"LED.js"
@@ -116,7 +111,7 @@ RED.nodes.registerType("LED",LED_Node);
     "url": "//ノードが格納されているgithubのURL"
   },
   "keywords": [
-    "//他者が検索する際に必要"
+    "//ノードに関係するキーワードを記載"
   ],
   "author": "",
   "license": "Apache-2.0",
@@ -125,4 +120,5 @@ RED.nodes.registerType("LED",LED_Node);
   },
   "homepage": "ノードが格納されているgithubのURL"
 }
-``` 
+```
+##ノード追加方法
