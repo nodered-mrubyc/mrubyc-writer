@@ -35,3 +35,38 @@ docker-compose exec <service> bash
 ## アクセス方法
 
 ブラウザで `http://localhost/` にアクセスする。
+
+## ノード作成・追加方法
+
+(1)jsファイル、htmlファイル、jsonファイルを作成する。
+以下にLEDノードの場合の例を示す。
+
+・jsファイル
+```sh
+module.exports = function(RED){
+
+function LED_Node(config){
+
+node.on('input', function(){
+*
+});
+}
+RED.nodes.registerType("LED",LED_Node);
+```
+
+・htmlファイル
+```sh
+<script type="text/javascript">
+    RED.nodes.registerType('LED', {　　
+        category: 'mruby_Rboad_Nodes', //ノードのグループ名（common,fnction,network,parsers,sequence,storage,オリジナル）
+        color: "#ffe3a6",
+        defaults: {
+           * //必要変数の設定
+        },
+        inputs: 1,　　//ノードの入力
+        outputs: 0,　　//ノードの出力
+        icon: "light.svg",　　//ノードのアイコン
+        label: function () {
+            return this.name || "LED";　　
+        },
+
