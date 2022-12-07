@@ -150,4 +150,4 @@ RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.js
 
 (3)```docker-compose build```でイメージを構築する。
 
-```docker-compose up -d```でコンテナを開始する。
+　```docker-compose up -d```でコンテナを開始する。
