@@ -92,10 +92,10 @@ RED.nodes.registerType("LED",LED_Node);
 ・jsonファイル
 
 以下の項目は設定必須。
-```name```
-```nodes```
-```main```
-```url```
+```name```,
+```nodes```,
+```main```,
+```url```,
 ```homepage```
 
 ```sh
