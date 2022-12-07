@@ -91,7 +91,12 @@ RED.nodes.registerType("LED",LED_Node);
 ```
 ・jsonファイル
 
-```""```表示のものは設定不要。
+以下の項目は設定必須。
+```name```
+```nodes```
+```main```
+```url```
+```homepage```
 
 ```sh
 {
@@ -102,7 +107,7 @@ RED.nodes.registerType("LED",LED_Node);
  　　}
 },
  "version":"1.0.0",
- "description":""
+ "description":"//ノードの説明"
  "main":"LED.js"
  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
