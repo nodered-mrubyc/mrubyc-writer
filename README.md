@@ -91,7 +91,7 @@ RED.nodes.registerType("LED",LED_Node);
 ```
 ・jsonファイル
 
-""表示のものは設定不要。
+```""```表示のものは設定不要。
 
 ```sh
 {
