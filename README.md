@@ -148,4 +148,6 @@ RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.js
 
 (2)コマンドプロンプトにて、ディレクトリ```node-red-contrib-xxx```に移動する。
 
-(3)```docker-compose build```,```docker-compose up -d```を実行する。
+(3)```docker-compose build```でイメージを構築する。
+
+```docker-compose up -d```でコンテナを開始する。
