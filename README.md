@@ -124,4 +124,4 @@ RED.nodes.registerType("LED",LED_Node);
 
 ## ノードの追加方法
 
-```shDocker```ファイルを
+```Docker```ファイルを
