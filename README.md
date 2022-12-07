@@ -38,7 +38,7 @@ docker-compose exec <service> bash
 
 ## ノード作成方法
 
-(1)githubでリポジトリを作成する。（名前はnode-red-contrib-xxx）
+(1)githubでリポジトリを作成する。（リポジトリ名はnode-red-contrib-xxx）
 
 (2)jsファイル、htmlファイル、jsonファイルを作成する。
 
@@ -90,8 +90,9 @@ RED.nodes.registerType("LED",LED_Node);
 //htmlの表示コード
 ```
 ・jsonファイル
-ローカルのフォルダで作成した場合、URLは不要。
+
 ""表示のものは設定不要。
+
 ```sh
 {
  "name": "node-red-contrib-xxx",
@@ -124,4 +125,21 @@ RED.nodes.registerType("LED",LED_Node);
 
 ## ノードの追加方法
 
-```Docker```ファイルを
+(1)```Dockerfile```はリポジトリ```node-red-contrib-xxx```と同じ階層に作成する。
+
+・Dockerfile
+```sh
+FROM nodered/node-red:latest
+
+//リポジトリの追加
+COPY node-red-contrib-xxx ./node-red-contrib-xxx
+RUN npm install ./node-red-contrib-xxx
+
+//ノードの削除
+RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.html
+RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.js
+```
+
+(2)コマンドプロンプトにて、ディレクトリ```node-red-contrib-xxx```に移動する。
+
+(3)```docker-compose build```,```docker-compose up -d```を実行する。
