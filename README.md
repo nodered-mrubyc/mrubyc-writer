@@ -133,6 +133,8 @@ RED.nodes.registerType("LED",LED_Node);
 
 (1)```Dockerfile```はリポジトリ```node-red-contrib-xxx```と同じ階層に作成する。
 
+Dockerfileに以下の項目を追加する。
+
 ・Dockerfile
 ```sh
 FROM nodered/node-red:latest
@@ -141,7 +143,7 @@ FROM nodered/node-red:latest
 COPY node-red-contrib-xxx ./node-red-contrib-xxx
 RUN npm install ./node-red-contrib-xxx
 
-//ノードの削除
+//ノードの削除（必要な場合）
 RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.html
 RUN rm ./node_modules/@node-red/nodes/core/xxx/xxx.js
 ```
