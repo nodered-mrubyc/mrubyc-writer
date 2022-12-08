@@ -64,8 +64,8 @@ RED.nodes.registerType("LED",LED_Node);
         defaults: {
            //必要変数の設定
         },
-        inputs: 1,　　//ノードの入力
-        outputs: 0,　　//ノードの出力
+        inputs: 1,　　//ノードの入力端子
+        outputs: 0,　　//ノードの出力端子
         icon: "light.svg",　　//ノードのアイコン
         label: function () {
             return this.name || "LED";　　
