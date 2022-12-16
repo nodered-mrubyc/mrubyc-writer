@@ -169,6 +169,11 @@ nodes_Hash.each do |element|
     element[1].store("depo_data".to_sym, "")
   end
 
+  #initLCDノードのプログラム記述(I2Cのノードタイプに合わせる)
+  if element[1][:type] == "initLCD"
+    element[1][:type] = "I2C"
+  end
+
  #I2Cノードのコマンドを16進数から10進数に変換
  if element[1][:type] == "I2C"
     element[1][:ad] = Integer(element[1][:ad])
