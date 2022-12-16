@@ -59,11 +59,6 @@ JSON_hash.map do |element|
       next
   end
 
-  # sampleLEDノードのプログラム記述（ノードタイプをLEDに合わせる）
-  if element[1][:type] == "sampleLED"
-    element[1][:type] = "LED"
-  end
-
  /不必要なプロパティの削除/
   element.delete(:z)
   element.delete(:name)
@@ -236,7 +231,7 @@ nodes_Hash.each do |node|
   if created_node_num.include?(node[1][:type]) == false
     created_node_num.store(node[1][:type],0)
   end
-
+  
   #LEDノードのプログラム記述
   if node[1][:type] == "LED"
     created_node_num["LED"] += 1
@@ -245,6 +240,11 @@ nodes_Hash.each do |node|
     else
       created_node_parts << Create_LEDnode(node, created_node_parts)
     end
+  end
+  
+  #simpleLEDノードのプログラム記述(LEDのノードタイプに合わせる)
+  if node[1][:type] == "simpleLED"
+    node[1][:type] = "LED"
   end
 
   #switchノードのプログラム記述
