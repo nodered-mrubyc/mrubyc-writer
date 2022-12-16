@@ -2,7 +2,8 @@
     "name": "node-red-contrib-mrubyc-rboard-original",
     "node-red" : {
       "nodes": {
-        "simpleLED":"LED.js"
+        "simpleLED":"LED.js",
+        "initLCD":"initLCD.js"
       }
     },
     "version": "1.0.2",
