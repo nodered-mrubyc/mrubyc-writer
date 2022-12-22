@@ -4,7 +4,8 @@
       "nodes": {
         "simpleLED":"LED.js",
         "initLCD":"initLCD.js",
-        "textLCD":"textLCD.js"
+        "textLCD":"textLCD.js",
+        "tempI2C":"tempI2C.js"
       }
     },
     "version": "1.0.2",

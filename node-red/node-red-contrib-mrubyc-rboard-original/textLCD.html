@@ -27,22 +27,22 @@
             rules: { 
                 value:[
                     {
-                        "t": "W",
-                        "v": "0x80",
-                        "c": "0x01",    // clear LCD
-                        "de": "5"
+                        t: "W",
+                        v: "0x80",
+                        c: "0x01",    // clear LCD
+                        de: "5"
                     },
                     {
-                        "t": "W",
-                        "v": "0x80",
-                        "c": "0x02",
-                        "de": "5"
+                        t: "W",
+                        v: "0x80",
+                        c: "0x02",
+                        de: "5"
                     },
                     {
-                        "t": "W",
-                        "v": "0x80",
-                        "c": "0x0c",
-                        "de": "5"
+                        t: "W",
+                        v: "0x80",
+                        c: "0x0c",
+                        de: "5"
                     }
                 ]}
         },
@@ -58,7 +58,6 @@
                 {v:"W",t:"Write"},
                 {v:"R",t:"Read"}
             ];
-            console.log(node);
         },
         oneditsave: function() {
             var node = this, i;
@@ -68,17 +67,16 @@
             for(i = node.rules.length; i > 3; i--) {
                 node.rules.pop();
             }
-            console.log(node);
             // 入力された文字列に関するコマンドをdefaults-rulesに追加
             for(i = 0; i < String(text_1.value).length && String(text_1.value).charCodeAt(i) != NaN; i++) {
                 command_1[i] = String(text_1.value).charCodeAt(i);
-                node.rules.push({ "t": "W", "v": "0x40", "c": String(command_1[i]), "de": "1" });
+                node.rules.push({ t: "W", v: "0x40", c: String(command_1[i]), de: "1" });
             }
             if(String(text_2.value).charCodeAt(0) != NaN) {
-                node.rules.push({ "t": "W", "v": "0x80", "c":"0xc0", "de": "5" });
+                node.rules.push({ t: "W", v: "0x80", c: "0xc0", de: "5" });
                 for(i = 0; i < String(text_2.value).length && String(text_2.value).charCodeAt(i) != NaN; i++) {
                     command_2[i] = String(text_2.value).charCodeAt(i);
-                    node.rules.push({ "t": "W", "v": "0x40", "c": String(command_2[i]), "de": "1" });
+                    node.rules.push({ t: "W", v: "0x40", c: String(command_2[i]), de: "1" });
                 }
             }
         },
