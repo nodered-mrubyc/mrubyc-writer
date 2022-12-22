@@ -5,7 +5,8 @@
         "simpleLED":"LED.js",
         "initLCD":"initLCD.js",
         "textLCD":"textLCD.js",
-        "tempI2C":"tempI2C.js"
+        "tempI2C":"tempI2C.js",
+        "tempADC":"tempADC.js"
       }
     },
     "version": "1.0.2",
