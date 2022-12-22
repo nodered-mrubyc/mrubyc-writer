@@ -16,6 +16,10 @@ def Node_I2C(node_id)
     Nodes_Hash[node_id][:rules].each do |rule|
         if rule[:t] == "W"
             I2C.write(sraveAd, rule[:v].to_i, rule[:c].to_i)
+            # カーソルを2行目に移動
+            # if rule[:c] == 192
+            #     I2C.setCursor(0, 1)
+            # end
         else
             output = I2C.read(sraveAd, rule[:v].to_i, rule[:b].to_i)
         end

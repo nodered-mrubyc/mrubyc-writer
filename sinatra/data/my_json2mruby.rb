@@ -173,6 +173,9 @@ nodes_Hash.each do |element|
   if element[1][:type] == "initLCD"
     element[1][:type] = "I2C"
   end
+  if element[1][:type] == "textLCD"
+    element[1][:type] = "I2C"
+  end
 
  #I2Cノードのコマンドを16進数から10進数に変換
  if element[1][:type] == "I2C"
