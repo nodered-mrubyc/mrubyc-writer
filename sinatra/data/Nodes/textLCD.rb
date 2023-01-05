@@ -1,4 +1,4 @@
-def Node_tempI2C(node_id)
+def Node_textLCD(node_id)
     /データ有無の確認/
     input_array = Dataprocessing(node_id,:get)
     Dataprocessing(node_id,:delete)
@@ -13,21 +13,24 @@ def Node_tempI2C(node_id)
 
     sraveAd = Nodes_Hash[node_id][:ad].to_i
     output = []
+    count = 0
     Nodes_Hash[node_id][:rules].each do |rule|
+        count += 1
         if rule[:t] == "W"
             I2C.write(sraveAd, rule[:v].to_i, rule[:c].to_i)
+            # カーソルを2行目に移動
+            # if rule[:c] == 192
+            #     I2C.setCursor(0, 1)
+            # end
         else
             output = I2C.read(sraveAd, rule[:v].to_i, rule[:b].to_i)
-            ans = output[1] | ((output[0] & 0x1f) << 8)
-            ans = (ans.to_f)* 0.0625
-            $temp = ans.to_s
-            puts("ans:" + $temp + "\r\n")
-            sleep(5)
         end
-
+        
         if rule[:de] != ""
             sleep_ms(rule[:de].to_i)
         end
+
     end
+    
     Dataprocessing(node_id,:create,[output])
 end

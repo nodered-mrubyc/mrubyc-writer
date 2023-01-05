@@ -174,16 +174,16 @@ nodes_Hash.each do |element|
     element[1][:type] = "I2C"
   end
   #textLCDノードのプログラム記述(I2Cのノードタイプに合わせる)
-  if element[1][:type] == "textLCD"
-    element[1][:type] = "I2C"
-  end
+  # if element[1][:type] == "textLCD"
+  #   element[1][:type] = "I2C"
+  # end
   # #tempI2Cノードのプログラム記述(I2Cのノードタイプに合わせる)
   # if element[1][:type] == "tempI2C"
   #   element[1][:type] = "I2C"
   # end
 
  #I2Cノード,tempI2Cノードのコマンドを16進数から10進数に変換
- if element[1][:type] == "I2C" || element[1][:type] == "tempI2C"
+ if element[1][:type] == "I2C" || element[1][:type] == "textLCD" || element[1][:type] == "tempLCD" || element[1][:type] == "tempI2C"
     element[1][:ad] = Integer(element[1][:ad])
     element[1][:rules].each do |rules_element|
 
