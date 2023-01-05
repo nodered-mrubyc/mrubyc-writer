@@ -1,4 +1,4 @@
-res<script type="text/html" data-template-name="tempI2C">
+<script type="text/html" data-template-name="tempLCD">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="label.name">
@@ -10,31 +10,37 @@ res<script type="text/html" data-template-name="tempI2C">
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('tempI2C', {
-        color:"#ffaaaa",
+    RED.nodes.registerType('tempLCD', {
+        color:"#fff0f0",
         category: 'mruby_Rboad_Original_Nodes',
         defaults: {
             name: { value:""},
-            ad:{value:"0x18"},
+            ad:{value:"0x3e"},
             rules: { 
                 value:[
                     {
                         t: "W",
-                        v: "0x08",
-                        c: "0x03",
-                        de: "1"
+                        v: "0x80",
+                        c: "0x01",    // clear LCD
+                        de: "5"
                     },
                     {
-                        t: "R",
-                        v: "0x05",
-                        b: "2",
-                        de: "1",
+                        t: "W",
+                        v: "0x80",
+                        c: "0x02",
+                        de: "5"
+                    },
+                    {
+                        t: "W",
+                        v: "0x80",
+                        c: "0x0c",
+                        de: "5"
                     }
                 ]}
         },
         inputs:1,
         outputs:1,
-        icon: "font-awesome/fa-thermometer-three-quarterse",
+        icon: "font-awesome/fa-television",
         label: function() {
             return this.name;
         },
@@ -44,30 +50,9 @@ res<script type="text/html" data-template-name="tempI2C">
                 {v:"W",t:"Write"},
                 {v:"R",t:"Read"}
             ];
-            console.log(node);
         },
         oneditsave: function() {
-            var rules = $("#node-input-rule-container").editableList('items');
             var node = this;
-            node.rules= [];
-            rules.each(function(i) {
-                var rule = $(this);
-                var type = rule.find(".node-input-rule-select").val();
-                var r = {t:type};
-
-                
-                r.v = rule.find(".node-input-rule-value").typedInput('value');
-                if (type === "R") {
-                    r.b = rule.find(".node-input-rule-byte").val();                    
-                }
-
-                if (type === "W") {
-                    r.c = rule.find(".node-input-rule-command").val();                    
-                }
-                r.de = rule.find(".node-input-rule-delay").val(); ;
-
-                node.rules.push(r);
-            });
         },
         oneditresize: function(size) {
             var rows = $("#dialog-form>div:not(.node-input-rule-container-row)");                                
@@ -83,6 +68,6 @@ res<script type="text/html" data-template-name="tempI2C">
     });
 </script>
 
-<script type="text/html" data-help-name="tempI2C">
-    <p>I2C高精度温度センサを扱うためのノードです
+<script type="text/html" data-help-name="tempLCD">
+    <p>LCDに温度を表示するためのノードです
 </script>
