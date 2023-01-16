@@ -1,0 +1,78 @@
+#rboard {
+    text-align: center;
+    top: 20px;
+    letter-spacing: 0.25em;
+}
+
+.buttons {
+    padding: auto;
+    margin: 20px;
+    text-align: center;
+}
+
+.connectButton {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/* button */
+.button {
+    min-width: 150px;
+    font-family: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+	background: #5bc7d2;
+	color: #fff;
+	border-radius: 100vh;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+	transition: 0.5s;
+    cursor: pointer;
+}
+.button:hover {
+	background: #fff;
+	color: #2F676E;
+    outline: 2px;
+    box-shadow: 0 0 0 2px #2F676E;
+}
+.button:focus {
+	background: #5bc7d2;
+	color: #fff;
+    box-shadow: 0 0 0 2px #2F676E;
+}
+
+#outputarea #input_code {
+    position: absolute;
+    margin: auto;
+    width: 80%;
+    /* height: 80%; */
+    /* padding: 100px 0 0; */
+    /* border: 2px dashed #494949; */
+    background: rgba(22, 165, 191, 0);
+}
+
+/* inputFile */
+.filelabel{
+    display: inline-block;
+    position: relative;
+    background-color: #5bc7d2;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 100vh;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.filelabel:hover{
+    background: #fff;
+	color: #5bc7d2;
+    outline: 2px;
+    box-shadow: 0 0 0 2px #cbd6ee;
+}
+
+.fileinput{
+    display: none;
+}

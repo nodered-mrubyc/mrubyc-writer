@@ -1,0 +1,151 @@
+[
+    {
+        "id": "5af97699dcd8d875",
+        "type": "inject",
+        "z": "2e512df1.34d662",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "dfdb9e31b35f682e"
+            ]
+        ]
+    },
+    {
+        "id": "dfdb9e31b35f682e",
+        "type": "Constant",
+        "z": "2e512df1.34d662",
+        "name": "",
+        "C": "1",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "6b5e57d71a98d201"
+            ]
+        ]
+    },
+    {
+        "id": "6b5e57d71a98d201",
+        "type": "I2C",
+        "z": "2e512df1.34d662",
+        "name": "",
+        "ad": "0x44",
+        "rules": [
+            {
+                "t": "W",
+                "v": "0x21",
+                "c": "0x30",
+                "de": "16"
+            },
+            {
+                "t": "W",
+                "v": "0xE0",
+                "c": "0x00",
+                "de": ""
+            },
+            {
+                "t": "R",
+                "v": "0x00",
+                "b": "6",
+                "de": ""
+            }
+        ],
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "762c69f38473f280"
+            ]
+        ]
+    },
+    {
+        "id": "762c69f38473f280",
+        "type": "function-Code",
+        "z": "2e512df1.34d662",
+        "name": "",
+        "func": "data = msg\ntemp = (data[0]<<8 |data[1])\ncelsius = -45 + (175*temp/65535.0)\n\nputs \"----------------------------\"\nputs celsius\nreturn celsius",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "28e5ee7b5b288e67"
+            ]
+        ]
+    },
+    {
+        "id": "28e5ee7b5b288e67",
+        "type": "switch",
+        "z": "2e512df1.34d662",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "24.0",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "24.0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "280822db625d72d2"
+            ],
+            [
+                "913f7083920c5bc9"
+            ]
+        ]
+    },
+    {
+        "id": "280822db625d72d2",
+        "type": "LED",
+        "z": "2e512df1.34d662",
+        "name": "赤LED",
+        "LEDtype": "GPIO",
+        "targetPort": "15",
+        "targetPort_mode": "2",
+        "onBoardLED": "",
+        "x": 630,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "913f7083920c5bc9",
+        "type": "LED",
+        "z": "2e512df1.34d662",
+        "name": "青LED",
+        "LEDtype": "GPIO",
+        "targetPort": "16",
+        "targetPort_mode": "2",
+        "onBoardLED": "",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    }
+]

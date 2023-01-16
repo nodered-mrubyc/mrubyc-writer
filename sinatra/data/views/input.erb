@@ -1,9 +1,17 @@
+<%# <!DOCTYPE html>
 <html lang="ja">	
-  <meta charset="UTF-8">
   <head>
+    <meta http-equiv="content-type" charset="UTF-8">
     <title>データフロープログラミング for mruby/c</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
+    <h1 id="rboard">RBoardに転送</h1>
+    <--   web serial api   -->
+    <div class="buttons">
+        <button onclick="onConnectButtonClick()" id="onConnectButton" class="button connectButton">接続</button>
+        <button onclick="disConnectButtonClick()" id="disConnectButton" class="button connectButton">切断</button>
+    </div>
     <h1>mruby/cプログラム生成</h1>
     Node-REDの情報から、mruby/c用のソースコードを生成します。
     <form method="POST">
@@ -19,5 +27,61 @@
     </form>
     <hr>
     <a href="/">Topへ戻る</a>
+    <script type="text/jsx;harmony=true" src="/js/script.js"></script>
   </body>
-</html>
+</html> %>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <%# <script type="text/javascript" src="js/jQuery-3.2.0.min.js"></script> %>
+    <title>データフロープログラミング for mruby/c</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 id="rboard">RBoardに転送</h1>
+    <%# <!--   web serial api   --> %>
+    <div class="buttons">
+        <button onclick="onConnectButtonClick()" id="onConnectButton" class="button connectButton">接続</button>
+        <button onclick="disConnectButtonClick()" id="disConnectButton" class="button connectButton">切断</button>
+    </div>
+    <form method="POST">
+        <div>
+            JSONデータ：
+            <textarea name="json_data" cols="60" rows="20" placeholder="Node-REDで「書き出し」をして、JSONコードをペーストしてください。"></textarea>
+        </div>
+        <%# <div class="buttons">
+            <input type="submit" value="Rubyコードを生成" formaction="/download_rb">
+        </div> %>
+        <div class="buttons">
+            <button class="button JSON2ByteButton" formaction="/download_rb">JSON → Byte</button>
+        </div>
+    </form>
+    <%# <a id="file" download="./createdRuby/mrubyc_program.mrb"></a> %>
+    <div class="buttons">
+        <form action="index.html" method="POST" entype="multpart/form-data">
+            <label for="file" class="filelabel button">ファイルを選択</label>
+            <input type="file" name="fileinput" id="file" class="fileinput" accept=".mrb">
+        </form>
+    </div>
+    <div class="buttons">
+        <button onclick="writeButtonClick()" class="button writeButton">書き込み</button>
+    </div>
+    
+    <br>
+    <textarea cols="80" rows="20" id="outputArea" placeholder="出力エリア"></textarea>
+    <br><br><br>
+
+    <%#   ruby code editor　（後日実装）   %>
+    <h1 id="ruby">Rubyコードの書き込み</h1>
+    <h3>Rubyコードを書き込んでください。</h3>
+    <textarea id="input_code" name="ruby_data" rows="20" cols="60" placeholder="ここにRubyコードを書き込む"></textarea><br>
+    <button onclick="save();" class="button saveButton" formaction="/download_mrb">保存</button>
+
+    <br><br>
+    <a href="/">Topへ戻る</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mrcp name="concurrent">
+  <version>1.0</version>
+  <timestamp>2022-01-12T10:42:17</timestamp>
+  <files>
+    <file name="prog1.rb">
+      <type>2</type>
+      <editing>true</editing>
+      <mark/>
+    </file>
+    <file name="prog2.rb">
+      <type>2</type>
+      <editing>true</editing>
+      <mark/>
+    </file>
+    <file name="prog3.rb">
+      <type>2</type>
+      <editing>true</editing>
+      <mark/>
+    </file>
+    <file name="prog4.rb">
+      <type>2</type>
+      <editing>true</editing>
+      <mark/>
+    </file>
+    <file name="prog5.rb">
+      <type>2</type>
+      <editing>true</editing>
+      <mark/>
+    </file>
+  </files>
+</mrcp>
