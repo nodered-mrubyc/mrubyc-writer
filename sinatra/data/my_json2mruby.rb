@@ -10,6 +10,7 @@ $compile_flg = false
 option = {}
 OptionParser.new do |opt|
   opt.on('-r Filename',   '読み込む.jsonファイル名を指定') {|name| option[:r] = name}
+  # opt.on('-w+ Filename',   '書き込む.jsonファイル名を指定') {|name| option[:w+] = name}
   opt.on('-w Filename',   'Rubyコードのファイル名を入力') {|name| option[:w] = name}
   opt.on('-d',   '生成したRubyコードのコンパイルとマイコンへの転送') {$compile_flg = true}
   opt.parse!(ARGV)
@@ -31,25 +32,24 @@ end
 
 if option[:w] != nil
 #  mrubyc_program = "./createdRuby/" + option[:w]
-  mrubyc_program = option[:w]
+  mrubycfilesname = option[:w]
 else
-  mrubyc_program = "./createdRuby/mrubyc_program.rb"
+  mrubycfilesname = "mrubyc_program"
 end
 
-puts "---"+ mrubyc_program +"を生成します。---"
+puts "---" + mrubycfilesname + "を生成します。---"
 
 /jsonファイルの読み込み/
 
 begin
   #  jsonfilesname = "./jsonFile/" + jsonfilesname
-  f = File.open(jsonfilesname)
+  f = File.open("./jsonFile/#{jsonfilesname}.json")
   str = f.read
   JSON_hash = JSON.parse(str, symbolize_names: true)
 rescue Errno::ENOENT
   puts "入力された.jsonファイルは存在しません。"
   return 
 end
-
 
 
 /読み込んだjsonファイルのデータ整形/
@@ -194,9 +194,6 @@ nodes_Hash.each do |element|
       end
     end
   end
-
-
-
 end
 
 
@@ -280,7 +277,7 @@ end
 Hash_Datas = nodes_Hash.to_s
 
 #ノード群のデータ書き込み&ノード管理の実装&バッファーの実装
-File.open(mrubyc_program, mode = "w"){|f|
+File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "w"){|f|
   hash_txt = Hash_Datas.to_s
   hash_txt = hash_txt.gsub(/}, :N/,"},\n :N")
   f.write("Nodes_Hash="+hash_txt+"\n")  # ファイルに書き込む
@@ -306,7 +303,7 @@ nodes_Hash.each do |element|
   f = File.open(fileurl)
   tFile = f.read
   f.close
-  File.open(mrubyc_program, mode = "a"){|f|
+  File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
   f.write(tFile)  # ファイルに書き込む
   f.write("\n\n")
 
@@ -326,7 +323,7 @@ nodes_Hash.each do |element|
 
   if "read" == element[1][:GPIOType]
     if "digital_read" == element[1][:ReadType]
-      File.open(mrubyc_program, mode = "a"){|f|
+      File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort_digital]},1)\n")  # ファイルに書き込む
       }  
     end
@@ -334,7 +331,7 @@ nodes_Hash.each do |element|
   end
 
   if "Button" == element[1][:type] && element[1][:targetPort] != ""
-    File.open(mrubyc_program, mode = "a"){|f|
+    File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort]},1)\n")  # ファイルに書き込む
       f.write("pinPull(#{element[1][:targetPort]},#{element[1][:selectPull]})\n") 
     }  
@@ -342,14 +339,14 @@ nodes_Hash.each do |element|
 
   if "write" == element[1][:GPIOType]
     if "digital_write" == element[1][:WriteType]
-      File.open(mrubyc_program, mode = "a"){|f|
+      File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort_digital]},0)\n")  # ファイルに書き込む
       }  
     end    
   end
 
   if "LED" == element[1][:type] && "using_LED" == element[1][:HOWuesLED]
-    File.open(mrubyc_program, mode = "a"){|f|
+    File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort]},0)\n")  # ファイルに書き込む
     }  
   end
@@ -359,7 +356,7 @@ nodes_Hash.each do |element|
 end
 
 
-File.open(mrubyc_program, mode = "a"){|f|
+File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
   f.write("while true\n")
   nodes_Hash.each do |element|
     

@@ -313,3 +313,1413 @@ def Node_function(node_id)
     Dataprocessing(node_id,:create,[output])
 end
     
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
+def Node_function(node_id)
+    input_array = Dataprocessing(node_id,:get)
+    Dataprocessing(node_id,:delete)
+    if input_array == []
+        return 0
+    end
+    output = 0
+
+    input_array.each do |input_data|
+ 
+    
+    end
+    Dataprocessing(node_id,:create,[output])
+end
+    
