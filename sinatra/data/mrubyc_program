@@ -1,3 +1,4 @@
+// 不要なファイル
 Nodes_Hash={:N6f473=>{:type=>"inject", :repeat=>"", :wires=>[[:N45b70]], :inputNodeid=>[], :last_time=>0.0, :flow_controll=>1},
  :N45b70=>{:type=>"I2C", :ad=>98, :rules=>[{:t=>"W", :v=>0, :c=>0, :de=>"1"}, {:t=>"W", :v=>1, :c=>0, :de=>"1"}, {:t=>"W", :v=>8, :c=>170, :de=>"1"}, {:t=>"W", :v=>4, :c=>255, :de=>"1"}, {:t=>"W", :v=>3, :c=>255, :de=>"1"}, {:t=>"W", :v=>2, :c=>255, :de=>"1"}], :wires=>[[]], :inputNodeid=>[:N6f473], :flow_endFlg=>0},
  :N7b6d6=>{:type=>"inject", :repeat=>"1", :wires=>[[:N600e5]], :inputNodeid=>[], :last_time=>0.0, :flow_controll=>1},
