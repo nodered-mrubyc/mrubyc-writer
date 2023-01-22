@@ -10,7 +10,19 @@
     text-align: center;
 }
 
-.connectButton {
+.files {
+    padding: auto;
+    margin: 0px;
+    text-align: center;
+}
+
+.output {
+    padding: auto;
+    margin: 20px;
+    text-align: center;
+}
+
+.connectButton{
     display: inline-block;
     margin: 0 20px;
 }
@@ -21,13 +33,12 @@
     font-family: inherit;
     appearance: none;
     border: 0;
-    border-radius: 5px;
     padding: 10px 20px;
 	background: #5bc7d2;
 	color: #fff;
-	border-radius: 100vh;
+	border-radius: 7px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.05em;
 	transition: 0.5s;
     cursor: pointer;
@@ -44,7 +55,7 @@
     box-shadow: 0 0 0 2px #2F676E;
 }
 
-#outputarea #input_code {
+#outputarea {
     position: absolute;
     margin: auto;
     width: 80%;
@@ -62,7 +73,7 @@
     color: #fff;
     font-size: 16px;
     padding: 10px 20px;
-    border-radius: 100vh;
+    border-radius: 7px;
     transition: all 0.5s;
     cursor: pointer;
 }

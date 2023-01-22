@@ -31,17 +31,17 @@ def Read_filename()
   end
 
   if option[:w] != nil
-    jsonfilesname_w = option[:w]
+    $jsonfilesname_w = option[:w]
   else
-    jsonfilesname_w = "./jsonFile/json_program.json"
+    $jsonfilesname_w = "json_program"
   end
 
-  $file_name_w = jsonfilesname_w.gsub(/.json/,"")
+  #$file_name_w = jsonfilesname_w.gsub(/.json/,"")
 end
 
-def Save_json(jsonfilesname_r, file_name_w)
+def Save_json(jsonfilesname_r, jsonfilesname_w)
   File.open("#{jsonfilesname_r}", "r"){|f|
-    writing_f = File.open("./jsonFile/#{file_name_w}.json", "w")
+    writing_f = File.open("./jsonFile/#{jsonfilesname_w}.json", "w")
     tFile = f.read
     f.close
     writing_f.write("\n")
@@ -68,4 +68,4 @@ end
 
 ##########以下main文###################
 Read_filename()
-Save_json($jsonfilesname_r, $file_name_w)
+Save_json($jsonfilesname_r, $jsonfilesname_w)

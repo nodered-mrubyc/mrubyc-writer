@@ -18,7 +18,7 @@ $mrubycompiler_folder = "./mrubyc_ide1.02_win"
 $Device_Name = "RBoard"
 
 $Auto_Run_Flag = false #生成されたプログラムをすぐにデバイスに流し込むか(RBoard用)
-$Poat_Num = "COM4" #RBoardをUSB接続したときのポート番号
+$Poat_Num = "COM3" #RBoardをUSB接続したときのポート番号
 
 $error_flag = false
 
@@ -45,19 +45,19 @@ def Read_filename()
 
   # 追記
   if option[:w] != nil
-    byte_program = option[:w]
+    $byte_program = option[:w]
   else
-    byte_program = "./createdRuby/mrubyc_program.mrb"
+    $byte_program = "mrubyc_program"
   end
 
   $file_name = mrubyc_program.gsub(/.rb/,"")
 
 end
 
-def Compile_to_mrb(file_name)
+def Compile_to_mrb(file_name, byte_program)
   puts "---指定したRubyコードを.mrbにコンパイルします。---"
   # コマンドを実行
-  cmd = system("cd #{$mrubycompiler_folder} && mrbc ../createdRuby/#{file_name}.rb && cd ..")
+  cmd = system("cd #{$mrubycompiler_folder} && mrbc ../public/createdRuby/#{file_name}.rb && cd ..")
   p cmd
   
   #コンパイルの成功の確認
@@ -107,7 +107,26 @@ def Pouting_program_to_device(filename)
 
 end
 
+# def save_file(url)
+#   filename = File.basename(url)
+#   open(filename, 'wb'){|file|
+#     OpenURI.open_uri(url, {:proxy=>nil}){|data|  #プロクシは使わない
+#       puts "\t"+data.content_type #ダウンロードするファイルのタイプを表示
+#       file.write(data.read) #ファイル名で保存
+#     }
+#   }
+# end
+
+# open("./createdRuby/mrubyc_program.mrb", "r"){|io|
+#   while line=io.gets  #line = filepath(url)
+#     line.chomp!
+#     print line
+#     save_file(line.chomp)
+#   end
+# }
+
+
 ##########以下main文###################
 Read_filename()
-Compile_to_mrb($file_name)
+Compile_to_mrb($file_name, $byte_program)
 Pouting_program_to_device($file_name)

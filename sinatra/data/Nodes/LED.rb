@@ -2,7 +2,7 @@
 
 def GPIO_digital_mode1(node_id,input)
     if input == 1
-        digitalWrite(Nodes_Hash[node_id][:targetPort].to_i,targetPort_mode,Nodes_Hash[node_id][:targetPort_mode].to_i)
+        digitalWrite(Nodes_Hash[node_id][:targetPort].to_i,Nodes_Hash[node_id][:targetPort_mode].to_i)
     end
 end
 
@@ -12,7 +12,7 @@ def GPIO_digital_mode2(node_id,input)
     elsif input == 1
         digitalWrite(Nodes_Hash[node_id][:targetPort].to_i,1)
     end
- end
+end
     
 def Node_LED(node_id)
     input_array = Dataprocessing(node_id,:get)
