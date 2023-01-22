@@ -1,79 +1,40 @@
-<%# <!DOCTYPE html>
-<html lang="ja">	
-  <head>
-    <meta http-equiv="content-type" charset="UTF-8">
-    <title>データフロープログラミング for mruby/c</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-  </head>
-  <body>
-    <h1 id="rboard">RBoardに転送</h1>
-    <--   web serial api   -->
-    <div class="buttons">
-        <button onclick="onConnectButtonClick()" id="onConnectButton" class="button connectButton">接続</button>
-        <button onclick="disConnectButtonClick()" id="disConnectButton" class="button connectButton">切断</button>
-    </div>
-    <h1>mruby/cプログラム生成</h1>
-    Node-REDの情報から、mruby/c用のソースコードを生成します。
-    <form method="POST">
-      <div>
-	JSONデータ：
-	<textarea name="json_data"
-		  rows="20" cols="60"
-		  placeholder="Node-REDで「書き出し」をして、ペーストしてください"></textarea>
-      </div>
-      <div>
-	<input type="submit" value="rbファイルを生成する" formaction="/download_rb">
-      </div>
-    </form>
-    <hr>
-    <a href="/">Topへ戻る</a>
-    <script type="text/jsx;harmony=true" src="/js/script.js"></script>
-  </body>
-</html> %>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta http-equiv="content-type" charset="UTF-8">
-    <%# <script type="text/javascript" src="js/jQuery-3.2.0.min.js"></script> %>
     <title>データフロープログラミング for mruby/c</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/image/favicon.ico">
 </head>
 <body>
     <h1 id="rboard">RBoardに転送</h1>
-    <%# <!--   web serial api   --> %>
+    <%#   web serial api    %>
+    <form method="POST">
+        <div class="buttons">
+            <button class="button" formaction="/download_rb">JSON → Byte</button>
+        </div>
+        <div class="files">
+            <textarea name="json_data" 
+                      cols="80" rows="10" 
+                      id="input_code" 
+                      placeholder="JSON書き込みエリア：&#13;Node-REDで「書き出し」をして、JSONコードをペーストしてください。"></textarea>
+        </div>
+    </form>
     <div class="buttons">
         <button onclick="onConnectButtonClick()" id="onConnectButton" class="button connectButton">接続</button>
         <button onclick="disConnectButtonClick()" id="disConnectButton" class="button connectButton">切断</button>
     </div>
-    <form method="POST">
-        <div>
-            JSONデータ：
-            <textarea name="json_data" cols="60" rows="20" placeholder="Node-REDで「書き出し」をして、JSONコードをペーストしてください。"></textarea>
-        </div>
-        <%# <div class="buttons">
-            <input type="submit" value="Rubyコードを生成" formaction="/download_rb">
-        </div> %>
-        <div class="buttons">
-            <button class="button JSON2ByteButton" formaction="/download_rb">JSON → Byte</button>
-        </div>
-    </form>
-    <%# <a id="file" download="./createdRuby/mrubyc_program.mrb"></a> %>
     <div class="buttons">
-        <form action="index.html" method="POST" entype="multpart/form-data">
-            <label for="file" class="filelabel button">ファイルを選択</label>
-            <input type="file" name="fileinput" id="file" class="fileinput" accept=".mrb">
-        </form>
+        <button onclick="file_save()" class="button filelabel">書き込み</button>
+        <%# ファイルのアップロード状況を表示
+        <p id="text_loading"></p> %>
     </div>
     <div class="buttons">
-        <button onclick="writeButtonClick()" class="button writeButton">書き込み</button>
+        <textarea cols="80" rows="20" id="outputArea" placeholder="出力エリア"></textarea>
     </div>
-    
-    <br>
-    <textarea cols="80" rows="20" id="outputArea" placeholder="出力エリア"></textarea>
     <br><br><br>
-
-    <%#   ruby code editor　（後日実装）   %>
+    
+    <%#   ruby code editor　（後日実装）    %>
     <h1 id="ruby">Rubyコードの書き込み</h1>
     <h3>Rubyコードを書き込んでください。</h3>
     <textarea id="input_code" name="ruby_data" rows="20" cols="60" placeholder="ここにRubyコードを書き込む"></textarea><br>

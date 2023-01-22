@@ -21,28 +21,25 @@ post "/download_rb" do
   # JSONデータ
   json = params[:json_data]
   # 一時ファイルに保存
-  # f_json = Tempfile.open(["t_", ".json"], tempdir="./jsonFile")
   f_json = Tempfile.open(["t_", ".json"])
   f_json.puts json
   f_json.close
   p f_json.path
-  # f_json_name = f_json.path[..-5-1]
-  # f_json_name[0, 11] = ""
-  # p f_json_name
-  # コマンド実行
-  # Tempfile(json)をローカル上に保存
-  cmd_save = "ruby ./save_json_file.rb -r #{f_json.path} -w json_program"
+  # コマンドを定義
+  # Tempfile(json)を保存
+  cmd_save_json = "ruby ./save_json_file.rb -r #{f_json.path} -w json_program"
   # JSON -> mruby/c
   cmd_json2mrubyc = "ruby ./my_json2mruby.rb -r json_program -w mrubyc_program"
   # mruby/c -> byte
   cmd_mrubyc2byte = "ruby ./convert_mrubyc.rb -r mrubyc_program -w mrubyc_program"
-  `#{cmd_save}`
+  # コマンドを実行
+  `#{cmd_save_json}`
   `#{cmd_json2mrubyc}`
   `#{cmd_mrubyc2byte}`
   # 一時ファイルを削除する
   File.unlink(f_json)
+  erb :input
 end
-
 
 # 後日実装
 post "/download_mrb" do

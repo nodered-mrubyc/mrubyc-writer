@@ -7,13 +7,6 @@ const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) 
 const disConnect = document.getElementById('disConnectButton');
 
 // onConect-関数化- //
-$(function(){
-    // 添付ファイルチェンジイベント
-    $('.fileinput').on('change', function(){
-      let file = $(this).prop('files')[0];
-      $('.filelabel').text(file.name);
-    });
-  });
 let reader, port, checkStr = "", str = "";
 async function onConnectButtonClick() {
     // シリアルポートへ接続
@@ -93,23 +86,45 @@ async function disConnectButtonClick() {
 
 // ファイルを選択ボタン //
 // ファイルのアップロード
-// const fileInput = document.getElementById("sendInput");
 const fileInput = document.getElementById("file");
 let fileReader = new FileReader();   //FileReaderのインスタンスを作成する
 let ary, file, file_size = 0;
-if (fileInput) {
-    fileInput.addEventListener( 'change', function(e) {
-        file = fileInput.files[0];   // 1つ目のファイルを読み込む
-        // 読み込み完了時のイベント
-        fileReader.onload = async () => {
-            console.log("OK(file) " + file_size);
-            console.log("finish upload file");
+
+// ファイルの読み込み
+$(function(){
+    // 添付ファイルチェンジイベント
+    $('.fileinput').on('change', function(){
+      let file = $(this).prop('files')[0];
+      $('.filelabel').text(file.name);
+    });
+});
+async function file_save() {
+    // (1) XMLHttpRequestオブジェクトを作成
+    const xhr = new XMLHttpRequest();
+    // (2) 取得するファイルの設定
+	xhr.open('get', './createdRuby/mrubyc_program.mrb');
+    xhr.responseType = "arraybuffer";
+    // (3) リクエスト（要求）を送信
+	xhr.send();
+    // レスポンスデータを受け取っている間は定期的に発生するイベント
+    xhr.addEventListener('progress', (e) => {
+        // p要素に進捗状況を表示
+        if( e.lengthComputable ) {
+            // ファイルのアップロード状況を表示
+            // text_loading.textContent = Math.floor((e.loaded / e.total) * 100) + "%";
+            file_size = e.total;    // 読み込んだファイルのサイズを取得する(.mrb)
+        } else {
+            text_loading.textContent = "読み込み中";
         }
-        fileReader.readAsArrayBuffer( file );   // 読み込みを実行
-        file_size = file.size;                  // 読み込んだファイルのサイズを取得する(.mrb)
-        console.log("OK(file) " + file_size);
-        console.log("finish upload file");
-    }, false)
+    });
+    xhr.onreadystatechange = function() {
+        // (4) 通信が正常に完了したか確認
+        if( xhr.readyState === 4 && xhr.status === 200) {
+            file = this.response;
+            console.log(file);
+            writeButtonClick();
+        }
+    }
 }
 
 // writeボタン //
@@ -117,7 +132,7 @@ let writer;
 async function writeButtonClick() {
     writer = port.writable.getWriter();
     let obj, result = obj || {};
-    let ary = new Uint8Array(fileReader.result);    // ArrayBuffer形式で読み込んだファイルをUint8Arrayに変換
+    let ary = new Uint8Array(file);
 
     // シリアルポートに\r\nを送信する
     await writer.write(encoder.encode("\r\n"));
