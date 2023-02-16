@@ -42,7 +42,7 @@
         "z": "f6f2187d.f17ca8",
         "name": "",
         "LEDtype": "GPIO",
-        "targetPort": "1",
+        "targetPort": "6",
         "targetPort_mode": "1",
         "onBoardLED": "",
         "x": 590,

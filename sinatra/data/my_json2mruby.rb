@@ -10,7 +10,6 @@ $compile_flg = false
 option = {}
 OptionParser.new do |opt|
   opt.on('-r Filename',   '読み込む.jsonファイル名を指定') {|name| option[:r] = name}
-  # opt.on('-w+ Filename',   '書き込む.jsonファイル名を指定') {|name| option[:w+] = name}
   opt.on('-w Filename',   'Rubyコードのファイル名を入力') {|name| option[:w] = name}
   opt.on('-d',   '生成したRubyコードのコンパイルとマイコンへの転送') {$compile_flg = true}
   opt.parse!(ARGV)
@@ -31,7 +30,6 @@ else
 end
 
 if option[:w] != nil
-#  mrubyc_program = "./createdRuby/" + option[:w]
   mrubycfilesname = option[:w]
 else
   mrubycfilesname = "mrubyc_program"
@@ -42,7 +40,6 @@ puts "---" + mrubycfilesname + ".rbを生成します。---"
 /jsonファイルの読み込み/
 
 begin
-  #  jsonfilesname = "./jsonFile/" + jsonfilesname
   f = File.open("./jsonFile/#{jsonfilesname}.json")
   str = f.read
   JSON_hash = JSON.parse(str, symbolize_names: true)
@@ -173,14 +170,6 @@ nodes_Hash.each do |element|
   if element[1][:type] == "initLCD"
     element[1][:type] = "I2C"
   end
-  #textLCDノードのプログラム記述(I2Cのノードタイプに合わせる)
-  # if element[1][:type] == "textLCD"
-  #   element[1][:type] = "I2C"
-  # end
-  # #tempI2Cノードのプログラム記述(I2Cのノードタイプに合わせる)
-  # if element[1][:type] == "tempI2C"
-  #   element[1][:type] = "I2C"
-  # end
 
  #I2Cノード,tempI2Cノードのコマンドを16進数から10進数に変換
  if element[1][:type] == "I2C" || element[1][:type] == "textLCD" || element[1][:type] == "tempLCD" || element[1][:type] == "tempI2C"
@@ -222,10 +211,6 @@ nodes_Hash.each do |node|
     node_num.store(node[1][:type],1)
   end
 end
-
-#nodes_Hash.each do |element|
-#  p element[1][:type]
-#end
 
 #ノード機能を「node.rb」としてプログラムを作成する。
 require "./Nodes/create_LED.rb"
@@ -304,7 +289,6 @@ nodes_Hash.each do |element|
   f = File.open(fileurl)
   tFile = f.read
   f.close
-  #File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
   File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
   f.write(tFile)  # ファイルに書き込む
   f.write("\n\n")
@@ -325,7 +309,6 @@ nodes_Hash.each do |element|
 
   if "read" == element[1][:GPIOType]
     if "digital_read" == element[1][:ReadType]
-      #File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort_digital]},1)\n")  # ファイルに書き込む
       }  
@@ -334,7 +317,6 @@ nodes_Hash.each do |element|
   end
 
   if "Button" == element[1][:type] && element[1][:targetPort] != ""
-    #File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
     File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort]},1)\n")  # ファイルに書き込む
       f.write("pinPull(#{element[1][:targetPort]},#{element[1][:selectPull]})\n") 
@@ -343,7 +325,6 @@ nodes_Hash.each do |element|
 
   if "write" == element[1][:GPIOType]
     if "digital_write" == element[1][:WriteType]
-      #File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort_digital]},0)\n")  # ファイルに書き込む
       }  
@@ -351,7 +332,6 @@ nodes_Hash.each do |element|
   end
 
   if "LED" == element[1][:type] && "using_LED" == element[1][:HOWuesLED]
-    #File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
     File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
       f.write("pinMode(#{element[1][:targetPort]},0)\n")  # ファイルに書き込む
     }  
@@ -362,7 +342,6 @@ nodes_Hash.each do |element|
 end
 
 
-#File.open("./createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
 File.open("./public/createdRuby/#{mrubycfilesname}.rb", mode = "a"){|f|
   f.write("while true\n")
   nodes_Hash.each do |element|
