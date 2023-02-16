@@ -38,7 +38,8 @@ post "/download_rb" do
   `#{cmd_mrubyc2byte}`
   # 一時ファイルを削除する
   File.unlink(f_json)
-  erb :input
+  # ページ遷移なし
+  redirect "/input"
 end
 
 # 後日実装

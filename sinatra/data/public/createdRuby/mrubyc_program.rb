@@ -1,5 +1,5 @@
 Nodes_Hash={:N521dd=>{:type=>"inject", :repeat=>"1", :wires=>[[:N5fd6e]], :inputNodeid=>[], :last_time=>0.0, :flow_controll=>1},
- :N5fd6e=>{:type=>"LED", :LEDtype=>"GPIO", :targetPort=>"1", :targetPort_mode=>"1", :onBoardLED=>"", :wires=>[], :inputNodeid=>[:N521dd]}}
+ :N5fd6e=>{:type=>"LED", :LEDtype=>"GPIO", :targetPort=>"6", :targetPort_mode=>"1", :onBoardLED=>"", :wires=>[], :inputNodeid=>[:N521dd]}}
 DatasBuffer = []
 
 def Dataprocessing(node_id, mode, output = "")

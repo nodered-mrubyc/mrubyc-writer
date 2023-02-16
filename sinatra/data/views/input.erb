@@ -4,14 +4,14 @@
     <meta http-equiv="content-type" charset="UTF-8">
     <title>データフロープログラミング for mruby/c</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/image/favicon.ico">
+    <link rel="shortcut icon" href="image/favicon.ico">
 </head>
 <body>
     <h1 id="rboard">RBoardに転送</h1>
     <%#   web serial api    %>
     <form method="POST">
         <div class="buttons">
-            <button class="button" formaction="/download_rb">JSON → Byte</button>
+            <button class="button" formaction="download_rb" method="POST">JSON → Byte</button>
         </div>
         <div class="files">
             <textarea name="json_data" 
