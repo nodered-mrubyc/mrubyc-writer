@@ -76,7 +76,7 @@ def LED_mode_code()
     code = "
 def GPIO_digital_mode1(node_id,input)
     if input == 1
-        digitalWrite(Nodes_Hash[node_id][:targetPort].to_i,targetPort_mode,Nodes_Hash[node_id][:targetPort_mode].to_i)
+        digitalWrite(Nodes_Hash[node_id][:targetPort].to_i,Nodes_Hash[node_id][:targetPort_mode].to_i)
     end
 end
     "

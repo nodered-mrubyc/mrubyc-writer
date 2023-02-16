@@ -22,13 +22,12 @@ def Node_LED(node_id)
     end
       
     input_array.each do |input|
-    
-        if ((Nodes_Hash)[node_id][:targetPort_mode] == "0" || (Nodes_Hash)[node_id][:targetPort_mode] == "1") && Nodes_Hash[node_id][:LEDtype] == "GPIO"
+        if ((Nodes_Hash)[node_id][:targetPort_mode] == "0" || (Nodes_Hash)[node_id][:targetPort_mode] == "1") 
+            && Nodes_Hash[node_id][:LEDtype] == "GPIO"
             GPIO_digital_mode1(node_id,input)
         end
         if Nodes_Hash[node_id][:targetPort_mode] == "2" && Nodes_Hash[node_id][:LEDtype] == "GPIO"
             GPIO_digital_mode2(node_id,input)
         end
-
     end
 end
