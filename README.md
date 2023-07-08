@@ -1,4 +1,4 @@
-# How to use mrbwrite2
+# mrubyc-writer
 
 ## コンテナのセットアップ
 
@@ -16,7 +16,7 @@ docker-compose up
 ## コンテナにログインする方法
 
 ```sh
-docker-compose exec mrbwrite bash
+docker-compose exec mrbwrite2 bash
 ```
 
 バックグランドで動かす場合は `-d` をつける。
