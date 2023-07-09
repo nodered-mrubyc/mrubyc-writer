@@ -28,3 +28,7 @@ docker-compose exec mrbwrite2 bash
 
 ブラウザで `http://localhost/` にアクセスする。
 
+## デモ
+
+https://github.com/nodered-mrubyc/mrubyc-writer/assets/32918854/c550f5e2-f766-4150-8089-24b6b8cf508a
+
