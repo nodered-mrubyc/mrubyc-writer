@@ -19,6 +19,13 @@ RUN git clone -b 3.1.0 https://github.com/mruby/mruby.git mruby-3.1 && \
     mkdir -p /usr/local/mruby-3.1/bin/ && \
     cp bin/* /usr/local/mruby-3.1/bin/
 
+WORKDIR /root/ 
+RUN git clone -b 3.2.0 https://github.com/mruby/mruby.git mruby-3.2 && \
+    cd mruby-3.2 && \
+    ./minirake && \
+    mkdir -p /usr/local/mruby-3.2/bin/ && \
+    cp bin/* /usr/local/mruby-3.2/bin/
+
 WORKDIR /root/data
 COPY data .
 EXPOSE 4567
