@@ -10,19 +10,17 @@
 
 ```sh
 docker-compose build
-docker-compose up
+docker-compose up -d
 ```
 
 - mrbwrite2 は sinatra を使っており，ポート番号 4567 を利用する．sinatraの 4567 番ポートは Docker デスクトップの 80 番ポートにマッピングされる
-- 時々，apt install や gem install で Web サイトにアクセスできないという理由で docker-compose up が失敗するとこがある．その場合は docker-compose build コマンドでコンテナを作り直すのが良い．
+- バックグランドで動かす場合は `-d` オプションをつける。
 
 ## コンテナにログインする方法
 
 ```sh
 docker-compose exec mrbwrite2 bash
 ```
-
-バックグランドで動かす場合は `-d` をつける。
 
 ## アクセス方法
 
