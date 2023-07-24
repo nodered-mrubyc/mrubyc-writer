@@ -1,0 +1,3 @@
+[submodule "mrbwrite2/data/nodered2mruby"]
+	path = mrbwrite2/data/nodered2mruby
+	url = https://github.com/nodered-mrubyc/nodered2mruby.git

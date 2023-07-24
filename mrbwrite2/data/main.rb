@@ -53,7 +53,7 @@ post "/compile/:id" do
   # json --> mruby/c
   if code == "json"
     # JSON -> mruby/c
-    cmd = "ruby ./my_json2mruby.rb -f #{filename}"
+    cmd = "ruby ./nodered2mruby.rb/nodered2mruby.rb #{filename}.json > #{filename}.rb"
     puts cmd
     
     cpr, cpe, cps = Open3.capture3( cmd )
