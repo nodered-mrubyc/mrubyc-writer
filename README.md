@@ -1,7 +1,12 @@
 # mrubyc-writer
 
-## 注意：
-公開リポジトリには Node-RED の出力する JSON ファイルを Ruby コードに変換するためのスクリプトやライブラリは含まれていません．それらは，現在，mrubyc-writer-priv (プライベートリポジトリ) にて限定公開しています．
+## clone：
+
+git submodule を使っているので，--recursive を付けて下さい．
+
+```sh
+git clone --recursive https://github.com/nodered-mrubyc/mrubyc-writer.git
+```
 
 ## コンテナのセットアップ
 
